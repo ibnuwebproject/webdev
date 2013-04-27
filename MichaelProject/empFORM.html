@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<script language="javascript" type="text/javascript" src="jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="niceforms.js"></script>
+		<title>empForm</title>
+		<script type="text/javascript">
+			$(document).ready(function(){	
+
+				if (!$.browser.opera) {
+			
+					// select element styling
+					$('select.select').each(function(){
+						var title = $(this).attr('title');
+						if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+						$(this)
+							.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+							.after('<span class="select">' + title + '</span>')
+							.change(function(){
+								val = $('option:selected',this).text();
+								$(this).next().text(val);
+								})
+					});
+
+				};
+				
+			});
+		</script>
+		<style>
+			form div{
+				position:relative;
+			} 
+
+			select.select{
+					position:relative;
+					z-index:10;
+					width:284px !important;
+					height:42px !important;
+					line-height:26px;
+			}
+
+			span.select{
+				position:absolute;
+				bottom:0;
+				float:left;
+				left:0;
+				width:284px;
+				height:42px;
+				line-height:40px;
+				text-indent:10px;
+				background:url(button_select2.png) no-repeat 0 0;
+				cursor:default;
+				z-index:1;
+			}
+				
+			form div.variation1 label{
+				display:block;
+				line-height:26px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="send_contact2.php" method="post" enctype="multipart/form-data">
+			<div id="form">
+				<div id="content"> 
+					FULL NAME <br/>
+					<input type="text" name="full_name" class="textfield_type1"/>
+				</div>
+				<br/>
+				<div id="content">
+					<div id="content2">
+						PHONE <br/>
+						<input type="text" name="phone" class="textfield_type2"/>
+					</div>
+					<div id="content2">
+						EMAIL<br/>
+						<input type="email" name="e_mail" class="textfield_type2"/>
+					</div>
+				</div>
+				<br/>
+				<div id="content">
+					<div id="content2">
+						<form method="post" action="">          
+							<div class="variation1">
+								<label>POSITION (choose one)</label>
+								<select name="position" class="select">
+									<option>Visual Merchandising Services
+									<option> RMU Display Design </option>
+									<option> RMU Installation </option>
+									<option> Kiosk Merchandising </option>
+									<option> Mall Visual Refresh </option>
+									<option> Retail Window Design & Fixtures </option>
+									<option> Fashion Show Production </option>
+									<option> Concert & EventProduction </option>
+									<option> Trade Show Design & Installation </option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<div id="content2">
+						<form method="post" action="">          
+							<div class="variation1">
+								<label>LOCATION DESIRED (choose one)</label>
+								<select name="location" class="select">						
+									<option>AL</option>
+									<option>AK</option>
+									<option>AZ</option>
+									<option>AR</option>
+									<option>CA</option>
+									<option>CO</option>
+									<option>CT</option>
+									<option>DE</option>
+									<option>FL</option>
+									<option>GA</option>
+									<option>HI</option>
+									<option>ID</option>
+									<option>IL</option>
+									<option>IN</option>
+									<option>IA</option>
+									<option>KS</option>
+									<option>KY</option>
+									<option>LA</option>
+									<option>ME</option>
+									<option>MD</option>
+									<option>MA</option>
+									<option>MI</option>
+									<option>MN</option>
+									<option>MS</option>
+									<option>MO</option>
+									<option>MT</option>
+									<option>NE</option>
+									<option>NV</option>
+									<option>NH</option>
+									<option>NJ</option>
+									<option>NM</option>
+									<option>NY</option>
+									<option>NC</option>
+									<option>ND</option>
+									<option>OH</option>
+									<option>OK</option>
+									<option>OR</option>
+									<option>PA</option>
+									<option>RI</option>
+									<option>SC</option>
+									<option>SD</option>
+									<option>TN</option>
+									<option>TX</option>
+									<option>UT</option>
+									<option>VT</option>
+									<option>VA</option>
+									<option>WA</option>
+									<option>WV</option>
+									<option>WI</option>
+									<option>WY</option>
+								</select>
+							</div>
+						</form>
+					</div>
+				</div>
+				<br/><br/>
+				<div id="content_textarea">
+					COMMENTS<br/>
+					<textarea name="message"></textarea>
+				</div>
+				<br/>
+				<div id="content">
+					<div id="content2" style="margin-top:10px;">
+						<form action="vars.php" method="post" class="niceform">
+							<label for="upload">*CV ATTACHMENT</label>
+							<input type="file" name="upload" id="upload" />
+						</form>
+					</div>
+					<div id="content2" align="right" style="margin-top:20px;">
+						<input type="submit" name="send" value="SEND"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
