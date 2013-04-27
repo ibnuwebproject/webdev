@@ -1,0 +1,137 @@
+body{
+	margin:0px;
+}
+
+#container{
+	width:100%;
+	height:100%;
+}
+
+#cont-head{
+	width:100%;
+	height:100%;
+	background: -webkit-linear-gradient(top, #d7e4f4 60%, #fcfefd); 
+	/* Firefox 3.6+ */ background: -moz-linear-gradient(top, #d7e4f4, #fcfefd); 
+	/* IE 10 */ background: -ms-linear-gradient(top, #d7e4f4, #fcfefd); 
+	/* Opera 11.10+ */ background: -o-linear-gradient(top, #d7e4f4, #fcfefd);
+}
+
+#header{
+	height:100px;
+	padding:10px 50px 30px 50px;
+}
+
+#cont-menu{
+	width:100%;
+	height:100%;
+	background:#549fd9;
+}
+
+#menu{
+	height:45px;
+	margin-left:50px;
+}
+
+nav.drop-menu {
+	float:left;
+	position:relative;
+	padding:15px 10px;
+	width:150px;
+	font:bold 12px Arial,Sans-Serif;
+	text-transform:uppercase;
+	color:#eee;
+	cursor:pointer;
+}
+
+nav.drop-menu:after {
+	width:0px;
+	height:0px;
+	border:5px solid transparent;
+	border-top-color:#fff;
+	position:absolute;
+	top:16px;
+	right:14px;
+}
+
+nav.drop-menu:hover{
+	background:#6D92A5;
+	color:#f5f2e7;
+}
+
+nav.drop-menu ul {
+	position:absolute;
+	top:100%;
+	left:0px;
+	z-index:99;
+	text-transform:none;
+	margin:0px;
+	padding:0px;
+	background:#6D92A5;
+	width:100%;
+	font-weight:normal;
+	display:none;
+}
+
+nav.drop-menu li {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+nav.drop-menu li a {
+	display:block;
+	margin:0px;
+	padding:15px 15px;
+	text-decoration:none;
+	color:#ccc;
+}
+
+nav.drop-menu li a:hover {
+	background:#c6c5c1;
+	padding-left:19px;
+	color:#333333;
+}
+
+nav.drop-menu:hover ul {
+	display:block;
+}
+
+
+#cont-middle{
+	width:100%;
+	height:100%;
+	background:#f1f1f1;
+}
+
+#middle{
+	height:400px;
+	padding:10px 50px 10px 50px;
+	font-family:Helvetica;
+}
+
+#middle-left{
+	float:left;
+	width:670px;
+}
+
+#middle-right{
+	float:left;
+	width:180px;
+	border:1px solid #f1f1f1;
+	padding:10px;
+	margin:30px 0px 0px 20px;
+	background:#d7e4f4;
+	border-radius:10px;
+}
+
+#cont-footer{
+	width:100%;
+	height:100%;
+	background:#549fd9;
+}
+
+#footer{
+	height:30px;
+	padding:15px 50px 10px 50px;
+	font-family:Helvetica;
+}

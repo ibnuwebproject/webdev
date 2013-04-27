@@ -1,0 +1,142 @@
+body{
+	margin:0;
+	font-family:Calibri;
+}
+
+#cont-header{
+	width:100%;
+	background: -webkit-linear-gradient(top, #88b4cd 60%, #b2d8ef); 
+	/* Firefox 3.6+ */ background: -moz-linear-gradient(top, #88b4cd, #b2d8ef); 
+	/* IE 10 */ background: -ms-linear-gradient(top, #88b4cd, #b2d8ef); 
+	/* Opera 11.10+ */ background: -o-linear-gradient(top, #88b4cd, #b2d8ef);
+}
+
+#header{
+	height:120px;
+	width:650px;
+	color:#fff;
+	padding:2px 0px 2px 30px;
+}
+
+#h_content{
+	height:78px;
+	width:auto;
+	margin-top:15px;
+}
+
+#h_tab{
+	height:30px;
+	width:auto;
+}
+
+#tab{
+	height:auto;
+	width:100px;
+	float:left;
+	padding:5px;
+	background:#7bb1cd;
+	text-align:center;
+	margin-right:3px;
+	cursor:pointer;
+}
+
+#tab a{
+	text-decoration:none;
+	color:#fff;
+}
+
+#tab a:hover{
+	color:#000;
+}
+
+#tab:hover{
+	background:#eee;
+	border:#eee;
+	color:#000;
+}
+
+#cont-content{
+	width:100%;
+	background:#eee;
+}
+
+#content{
+	width:750px;
+	height:850px;
+	padding:10px 0px 10px 25px;
+}
+
+#c-left{
+	width:200px;
+	height:850px;
+	float:left;
+}
+
+#c-right{
+	float:left;
+	width:550px;
+	height:850px;
+}
+
+#c-right input[type=text]{
+	height:23px;
+	width:400px;
+	padding:3px;
+	border:1px solid #eee;
+}
+
+#c-right textarea{
+	height:90px;
+	width:400px;
+	padding:3px;
+	border:1px solid #eee;
+}
+
+#c-right select{
+	height:30px;
+	width:auto;
+	padding:5px;
+	margin-right:10px;
+	border:1px solid #eee;
+}
+
+#isi{
+	height:30px;
+	width:auto;
+	padding:5px 0px 5px 10px;
+	border:1px solid #ddd;
+	margin:5px 0px 5px 5px;
+}
+
+#isi_besar{
+	height:100px;
+	width:auto;
+	padding:5px 0px 5px 10px;
+	border:1px solid #ddd;
+	margin:5px 0px 5px 5px;
+}
+
+#content input[type=submit],input[type=reset]{
+	background: -webkit-linear-gradient(top, #a1b7f7 60%, #cdd4ea); 
+	/* Firefox 3.6+ */ background: -moz-linear-gradient(top, #a1b7f7, #cdd4ea); 
+	/* IE 10 */ background: -ms-linear-gradient(top, #a1b7f7, #cdd4ea); 
+	/* Opera 11.10+ */ background: -o-linear-gradient(top, #a1b7f7, #cdd4ea);
+	border:1px solid #eee;
+	padding:5px;
+	border-radius:10px;
+	width:100px;
+	color:#5c657f;
+	cursor:pointer;
+}
+
+#cont-footer{
+	width:100%;
+	background:#c4c4c4;
+}
+
+#footer{
+	height:35px;
+	width:650px;
+	padding:20px 10px 5px 10px;
+	text-align:center;
+}
