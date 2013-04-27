@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<script language="javascript" type="text/javascript" src="jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="niceforms.js"></script>
+		<title>cntForm</title>
+		<script type="text/javascript">
+			$(document).ready(function(){	
+
+				if (!$.browser.opera) {
+			
+					// select element styling
+					$('select.select').each(function(){
+						var title = $(this).attr('title');
+						if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+						$(this)
+							.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+							.after('<span class="select">' + title + '</span>')
+							.change(function(){
+								val = $('option:selected',this).text();
+								$(this).next().text(val);
+								})
+					});
+
+				};
+				
+			});
+		</script>
+		<style>
+			form div{
+				position:relative;
+			} 
+
+			select.select{
+					position:relative;
+					z-index:10;
+					width:602px !important;
+					height:42px !important;
+					line-height:26px;
+			}
+
+			span.select{
+				position:absolute;
+				bottom:0;
+				float:left;
+				left:0;
+				width:602px;
+				height:42px;
+				line-height:40px;
+				text-indent:10px;
+				background:url(button_select.png) no-repeat 0 0;
+				cursor:default;
+				z-index:1;
+			}
+				
+			form div.variation1 label{
+				display:block;
+				line-height:26px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="send_contact.php" method="post" enctype="multipart/form-data">
+			<div id="form">
+				<div id="content"> 
+					FULL NAME <br/>
+					<input type="text" name="full_name" class="textfield_type1"/>
+				</div>
+				<br/>
+				<div id="content">
+					<div id="content2">
+						PHONE <br/>
+						<input type="text" name="phone" class="textfield_type2"/>
+					</div>
+					<div id="content2">
+						EMAIL<br/>
+						<input type="email" name="e_mail" class="textfield_type2"/>
+					</div>
+				</div>
+				<br/>
+				<div id="content">
+					<form method="post" action="">          
+						<div class="variation1">
+							<label>SERVICE REQUIRED(choose one)</label>
+							<select class="select">
+								<option>Visual Merchandising Services</option>
+								<option>RMU Display Design</option>
+								<option>RMU Installation</option>
+								<option>Kiosk Merchandising</option>
+								<option>Mall Visual Refresh</option>
+								<option>Retail Window Design & Fixtures</option>
+								<option>Fashion Show Production</option>
+								<option>Concert & EventProduction</option>
+								<option>Trade Show Design & Installation</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<br/><br/>
+				<div id="content_textarea">
+					MESSAGE<br/>
+					<textarea name="message"></textarea>
+				</div>
+				<br/>
+				<div id="content">
+					<div id="content2" style="margin-top:10px;">
+						<form action="vars.php" method="post" class="niceform">
+							<label for="upload">Upload a File:</label>
+							<input type="file" name="upload" id="upload" />
+						</form>
+					</div>
+					<div id="content2" align="right" style="margin-top:20px;">
+						<input type="submit" name="send" value="SEND"/>
+					</div>
+				</div>
+				<br/>
+			</div>
+		</form>
+	</body>
+</html>

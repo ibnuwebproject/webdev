@@ -1,0 +1,127 @@
+#form{
+	height:620px;
+	width:639px;
+	color:#000;
+	font-family:Arial;
+	font-size:16px;
+	padding:20px 10px 10px 30px;
+	border:1px solid #000;
+}
+
+#content{
+	height:50px;
+	width:auto;
+}
+
+#content2{
+	height:auto;
+	width:300px;
+	margin-right:9px;
+	float:left;
+}
+
+#content2 select{
+	width:292px;
+	height:auto;
+	padding:5px;
+}
+
+#content_textarea{
+	height:245px;
+	width:auto;
+}
+
+#form br{
+	margin:5px;
+}
+
+.textfield_type1{
+	width:590px;
+	height:auto;
+}
+
+.textfield_type2{
+	width:280px;
+	height:auto;
+}
+
+#form input[type=text], input[type=email]{
+	padding:5px;
+}
+
+#form textarea{
+	padding:10px;
+	width:580px;
+	height:220px;
+}
+
+#form input[type=submit]{
+	width:100px;
+	height:50px;
+	font-size:18px;
+	padding:10px;
+	margin-right:5px;
+	border:1px solid #f7f7f7;
+	background:#000;
+	color:#fff;
+	cursor:pointer;
+}
+
+.NFText {
+	border:none; 
+	vertical-align:middle; 
+	font:15px Arial, Helvetica, sans-serif; 
+	background:none;
+}
+
+.NFTextCenter {
+	height:45px; 
+	background:url(browse.png) repeat-x 0 0; 
+	padding-right:100px;
+	padding-top:5px;
+	margin:0; 
+	float:left; 
+	line-height:15px;
+}
+
+.NFTextLeft, .NFTextRight {
+	width:0px; 
+	height:45px; 
+	vertical-align:middle; 
+	float:left;
+}
+
+.NFFileButton {
+	padding-bottom:0; 
+	vertical-align:bottom; 
+	cursor:pointer; 
+	width:224px; 
+	height:46px;
+}
+
+.NFFile {
+	position:relative; 
+	margin-bottom:5px;
+}
+
+.NFFile input.NFhidden {
+	position:relative; 
+	filter:alpha(opacity=0); 
+	opacity:0; 
+	z-index:2; 
+	cursor:pointer; 
+	text-align:left;
+}
+
+.NFFileNew {
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+	z-index:1;
+}
+
+.NFhidden {
+	opacity:0; 
+	z-index:-1; 
+	position:relative;
+}
